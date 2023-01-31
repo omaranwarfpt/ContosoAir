@@ -1,9 +1,8 @@
 # This project is retired, archived, and no longer supported. You are welcome to continue to use and fork the repository.
 
-
 # Microsoft.Github CI Demo
 
-Demo website application for Contoso Air.  
+Demo website application for Contoso Air.
 Runs a nodejs server (Express v4.16) that stores customer booked flights in a CosmosDb database.
 
 ## Requirements
@@ -13,7 +12,7 @@ Runs a nodejs server (Express v4.16) that stores customer booked flights in a Co
 
 ## Local Environment Setup
 
-This project uses ES6, and has been tested with nodejs v8.9.4  
+This project uses ES6, and has been tested with nodejs v8.9.4
 There is almost no front-end logic. Still, the application uses webpack to compile sass styles and bundle third parties js files. If you want to modify any front logic or style run `npm run local:build`.
 
 In order to launch a local server on port 3000 (can be modified with environment variable PORT) run:
@@ -31,29 +30,30 @@ This will run locally the server and attach to the CosmosDb Endpoint using mongo
 
 In order to create the Azure deploy there is an ARM template located at deployment folder.
 
-ARM template parameter | Usage | e.g.
---- | --- | ---
-p_environment | set an environment suffix | `dev`
-p_site_prefix | common prefix for all resources created | `contoso-air`
-p_site_web_name | website specific resource name | `web`
-p_comosdb_name | database specific resource name | `db`
+| ARM template parameter | Usage                                   | e.g.            |
+| ---------------------- | --------------------------------------- | --------------- |
+| p_environment          | set an environment suffix               | `dev`         |
+| p_site_prefix          | common prefix for all resources created | `contoso-air` |
+| p_site_web_name        | website specific resource name          | `web`         |
+| p_comosdb_name         | database specific resource name         | `db`          |
 
 > e.g. previous parameter examples will create resources `contoso-air-db-dev` and `contoso-air-db-dev`.
 
-Then you run the ARM template with the following commands ([Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) required): 
+Then you run the ARM template with the following commands ([Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) required):
 
 ```bash
 cd deployment
 az group deployment create --resource-group <resource_group_name> --template-file azuredeploy.json --parameters p_environment=dev
 ```
 
-What's left is to compress the whole folder in a zip file and upload it to Azure. Manually it can be done going to [https://<app_service_resource>.scm.azurewebsites.net/ZipDeployUI](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejs#deploy-zip-file)
+What's left is to compress the whole folder in a zip file and upload it to Azure. Manually it can be done going to [https://app_service_resource.scm.azurewebsites.net/ZipDeployUI](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejs#deploy-zip-file)
 
 > Note: Files under folders `deployment`, `scss` and files `front.js` and `webpack.config.js` are not required to be zipped.
 
 ## Azure VSTS Deployment
 
 ### Build process tasks
+
 - [Copy Files](https://go.microsoft.com/fwlink/?LinkID=708389)
   - Source Folder: deployment
   - Contents: *.json
@@ -67,6 +67,7 @@ What's left is to compress the whole folder in a zip file and upload it to Azure
 - [Publish Artifact](https://go.microsoft.com/fwlink/?LinkID=708390)
 
 ### Release process tasks:
+
 - [Azure Resource Group Deployment](https://aka.ms/argtaskreadme)
   - Template: select from the artifact in the Templates folder.
   - Template Parameters: same as previous parameter.
