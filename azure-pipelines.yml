@@ -29,6 +29,8 @@ steps:
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact: drop'
 
+# TESTING THE PIPELINES
+
 # THESE STEPS ADDED FOR TESTS
 # steps:
 #   - task: Npm@1
