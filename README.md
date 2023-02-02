@@ -2,11 +2,10 @@
 
 
 
-[![Build Status](https://dev.azure.com/omaranwarfpt0962/ContosoAir/_apis/build/status/omaranwarfpt.ContosoAir?branchName=master)](https://dev.azure.com/omaranwarfpt0962/ContosoAir/_build/latest?definitionId=1&branchName=master) CURRENT ONE
+ [![Build Status](https://dev.azure.com/omaranwarfpt0962/ContosoAir/_apis/build/status/omaranwarfpt.ContosoAir?branchName=master)](https://dev.azure.com/omaranwarfpt0962/ContosoAir/_build/latest?definitionId=1&branchName=master)
 
 *Ignore: Pushing to check.
 
-[![Build Status](https://dev.azure.com/omaranwarfpt/vidlyTest/_apis/build/status/omaranwarfpt.ContosoAir?branchName=master)](https://dev.azure.com/omaranwarfpt/vidlyTest/_build/latest?definitionId=2&branchName=master) IGNORE THIS ONE
 
 # This project is retired, archived, and no longer supported. You are welcome to continue to use and fork the repository.
 
