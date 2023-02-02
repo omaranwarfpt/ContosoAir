@@ -8,13 +8,13 @@
     {
         "id": 2,
         "title": "Paris",
-        "desktop-image": "paris.jpg",
+        "desktop-image": "hawaii.jpg",
         "mobile-image": "paris_m.jpg"
     },
     {
         "id": 3,
         "title": "Barcelona",
-        "desktop-image": "barcelona.jpg",
+        "desktop-image": "hawaii.jpg",
         "mobile-image": "barcelona_m.jpg"
     }
 ]
